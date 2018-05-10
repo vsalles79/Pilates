@@ -160,7 +160,7 @@ function SomenteNumero(e){
   <div class="container">
     <div class="row">
       <div class="col-md-12" id="menuTab">
-        <a href="index.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a>
+        <a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a>
         <a href="cadastroAluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Cadastro de Aluno"><i class="fas fa-user"></i></a>
         <a href="cadastroFuncionario.php" id="btnAluno" class="btn btn-primary" role="button" title="Cadastro de Funcionário"><i class="fas fa-users"></i></a>
         <a href="agenda.html" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
