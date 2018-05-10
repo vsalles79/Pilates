@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Pilates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap-dynamic-tabs/bootstrap-dynamic-tabs.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" id="menuTab">
+				<a href="index.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a>
+				<a href="cadastroAluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Cadastro de Aluno"><i class="fas fa-user"></i></a>
+				<a href="cadastroFuncionario.php" id="btnAluno" class="btn btn-primary" role="button" title="Cadastro de Funcionário"><i class="fas fa-users"></i></a>
+				<a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+				<a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a>
+			</div>
+		</div>
+
+		<div class="app flex-row align-items-center" id="fast-buttons">
+			<div class="container">
+				<div class="row justify-content-center">
+	      			<div class="col-md-6">
+	        			<div class="card-group">
+							<div class="btn-cadastro-aluno">
+								<a href="/sistema/cadastroAluno.php">
+									<button type="button" class="btn btn-primary btn-lg">Cadastro de Aluno</button>
+								</a>
+							</div>
+							<div class="btn-cadastro-funcionario">
+								<a href="/sistema/cadastroFuncionario.php">
+									<button type="button" class="btn btn-primary btn-lg">Cadastro de Funcionário</button>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+	        			<div class="card-group">
+							<div class="btn-agenda">
+								<a href="../agenda/agenda.php">
+									<button type="button" class="btn btn-danger btn-lg">Agenda</button>
+								</a>
+							</div>
+							<div class="btn-relatorio">
+								<a href="/sistema/relatorio.html">
+									<button type="button" class="btn btn-warning btn-lg">Relatorio</button>
+								</a>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="bootstrap-dynamic-tabs/bootstrap-dynamic-tabs.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+	<script>
+        $(document).ready(function(){
+            $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+            });
+        });
+
+	</script>
+</body>
+</html>
+
+
+
+<!--
+<a href="listar.php"><font size="3" face="Verdana, Arial, Helvetica, sans-serif">Listar Usuarios</font></a><br />
+-->
