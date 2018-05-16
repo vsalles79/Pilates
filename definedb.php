@@ -1,6 +1,6 @@
 <?php
-define("SERVIDOR", "mysql.hostinger.com.br");
-define("USUARIO", "u828469361_user");
-define("SENHA", "ACESSObanco");
-define("BANCO", "u828469361_bd");
+define("SERVIDOR", "localhost");
+define("USUARIO", "root");
+define("SENHA", "");
+define("BANCO", "cadastro");
 ?>

@@ -152,6 +152,7 @@ function SomenteNumero(e){
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/cadastroFuncionario.css">  
 	
 </head>
@@ -160,22 +161,29 @@ function SomenteNumero(e){
   <div class="container">
     <div class="row">
       <div class="col-md-12" id="menuTab">
-        <a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a>
-        <a href="cadastroAluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Cadastro de Aluno"><i class="fas fa-user"></i></a>
-        <a href="cadastroFuncionario.php" id="btnAluno" class="btn btn-primary" role="button" title="Cadastro de Funcionário"><i class="fas fa-users"></i></a>
-        <a href="agenda.html" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
-        <a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a>
+            <div class="menu">
+            <ul class="menu-list">
+              <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
+              <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
+              <li><a href="aluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
+              <li>
+                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
+            <i class="fas fa-briefcase"></i></a>
+                 <ul class="sub-menu">
+                  <li><a href="cadastroAluno.php">Aluno</a></li>
+                  <li><a href="cadastroFuncionario.php">Colaborador</a></li>
+                  <li><a href="servico.php">Serviço</a></li>
+                </ul>
+              </li>
+              <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a></li> -->
+            </ul>
+          </div>
       </div>
-      <div id="tabs">
-      </div>
-        <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#menu1">Cadastro Funcion&aacute;rio</a></li>
-        </ul>
     </div>
 
   <div class="tab-content">
-    <div id="menu1" class="tab-pane fade in active">
-      <div class="col-sm-12"> 
+    <div id="menu1">
+      <div class="col-sm-12 form-func"> 
         <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvar.php">
           <div class="col-sm-6">
           

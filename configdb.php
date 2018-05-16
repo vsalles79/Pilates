@@ -1,7 +1,7 @@
 <?
-$host		=	"mysql.hostinger.com.br"; //endereço do seu servidor MySQL
-$database	=	"u828469361_bd"; //o database que conterá sua tabela, muitas vezes seu próprio login
+$host		=	"localhost"; //endereï¿½o do seu servidor MySQL
+$database	=	"cadastro"; //o database que conterï¿½ sua tabela, muitas vezes seu prï¿½prio login
 $tabela		=	"usuarios"; //o nome de sua tabela
-$login_db	=	"u828469361_user"; //login usado no MySQL
-$senha_db	=	"ACESSObanco"; //senha usado no MySQL
+$login_db	=	"root"; //login usado no MySQL
+$senha_db	=	""; //senha usado no MySQL
 ?>
