@@ -1,0 +1,9 @@
+#aluno{
+    background-color: #5697cf;
+}
+
+.nav-tabs > li > a{
+	color: #fff;
+	font-weight: bolder;
+    font-size: 15px;
+}
