@@ -7,7 +7,7 @@ if(file_exists("init.php")) {
 }
 
 if(!function_exists("Abre_Conexao")) {
-	echo "Erro o arquivo init.php foi auterado, nao existe a função Abre_Conexao";
+	echo "Erro o arquivo init.php foi auterado, nao existe a funÃ§Ã£o Abre_Conexao";
 	exit;
 }
 
@@ -37,7 +37,7 @@ if(mysql_errno() != 0) {
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
-      /* Máscaras ER */
+      /* MÃ¡scaras ER */
       function mascara(o,f){
           v_obj=o
           v_fun=f
@@ -47,9 +47,9 @@ if(mysql_errno() != 0) {
           v_obj.value=v_fun(v_obj.value)
       }
       function mtel(v){
-          v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
-          v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-          v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+          v=v.replace(/\D/g,"");             //Remove tudo o que nÃ£o Ã© dÃ­gito
+          v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parÃªnteses em volta dos dois primeiros dÃ­gitos
+          v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hÃ­fen entre o quarto e o quinto dÃ­gitos
           return v;
       }
       function id( el ){
@@ -128,7 +128,7 @@ form1.cep.focus();
 return false;
 }
 if (endereco == "") {
-alert('Preencha o campo Endereço');
+alert('Preencha o campo EndereÃ§o');
 form1.endereco.focus();
 return false;
 }
@@ -177,28 +177,28 @@ function SomenteNumero(e){
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/cadastroAluno.css">	
+  <link rel="stylesheet" type="text/css" href="css/servico.css">	
 </head>
 
-<body id="cad-aluno">
+<body id="cad-servico">
   <div class="container">
-    <div class="row">
+   <div class="row">
       <div class="col-md-12" id="menuTab">
             <div class="menu">
             <ul class="menu-list">
               <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
               <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
-              <li><a href="cadastroAluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
+              <li><a href="aluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
               <li>
-                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
+                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="ServiÃ§o">
             <i class="fas fa-briefcase"></i></a>
                  <ul class="sub-menu">
-                  <li><a href="aluno.php">Aluno</a></li>
+                  <li><a href="cadastroAluno.php">Aluno</a></li>
                   <li><a href="cadastroFuncionario.php">Colaborador</a></li>
-                  <li><a href="servico.php">Serviço</a></li>
+                  <li><a href="servico.php">ServiÃ§o</a></li>
                 </ul>
               </li>
-              <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a></li> -->
+              <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="RelatÃ³rio"><i class="fas fa-clipboard"></i></a></li> -->
             </ul>
           </div>
       </div>
@@ -206,100 +206,29 @@ function SomenteNumero(e){
   
     <div class="tab-content">
       <div id="menu1">
-        <div class="col-sm-12 form-aluno">
+        <div class="col-sm-12 form-servico">
           <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvar.php">
               <div class="col-sm-6">
 
                     <div class="form-group">
                       <div class="input-group" id="name">
-                        <input name="nome" type="text" id="nome" maxlength="45" class="textBox" placeholder="Nome"/>
-                      </div>
-                        <button type="button" class="btn btn-primary" id="search-name" data-toggle="modal" data-target="#myModal">
-                          <i class="fa fa-search"></i></button>
-                    </div>
-
-                	
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input name="data" type="date" id="data" maxlength="10" class="textBox" placeholder="Data Nascimento" />
+                        <input name="id-servico" type="text" id="id-servico" maxlength="45" class="textBox" placeholder="ID"/>
                       </div>
                     </div>
 
-                	
                     <div class="form-group">
                       <div class="input-group">
-                        <input  placeholder="cpf" name="cpf" type="text" id="cpf" maxlength="14" class="textBox" onkeypress='return SomenteNumero(event)' />
+                        <input name="descricao" type="text" id="descricao-servico" maxlength="10" class="textBox" placeholder="DescriÃ§Ã£o" />
                       </div>
                     </div>
-                       
-                  	<div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Telefone" name="telefone" type="text" id="telefone" maxlength="14" class="textBox" onkeypress='return SomenteNumero(event)'/>
-                      </div>
-                    </div>
-                  	
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Celular" name="celular" type="text" id="celular" maxlength="15" class="textBox" onkeypress='return SomenteNumero(event)'/>
-                      </div>
-                    </div>
-                        
-                  	<div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Email" name="email" type="text" id="email" maxlength="45" class="textBox" />
-                      </div>
-                    </div>
-                  	
-                  	<div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Sexo" name="sexo" type="text" id="sexo" maxlength="10" class="textBox" />
-                      </div>
-                    </div>
-              </div>
 
-              <div class="col-sm-6">
                     <div class="form-group">
                       <div class="input-group">
-                        <input placeholder="CEP" name="cep" type="text" id="cep" maxlength="9" class="textBox" />
+
+                        <input name="valor" type="text" id="valor-servico" maxlength="10" class="textBox" placeholder="Valor serviÃ§o" />
                       </div>
                     </div>
-                  
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Endere&ccedil;o" name="endereco" type="text" id="endereco" maxlength="45" class="textBox" />
-                      </div>
-                    </div>
-                  
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="N&uacute;mero" name="numero" type="text" id="numero" maxlength="5" class="textBox" onkeypress='return SomenteNumero(event)'/>
-                      </div>
-                    </div>
-                  
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Complemento" name="complementoEnd" type="text" id="complementoEnd" maxlength="45" class="textBox" />
-                      </div>
-                    </div>
-                  
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Status" name="statusUser" type="text" id="statusUser" maxlength="10" class="textBox" />
-                      </div>
-                    </div>
-                  
-                    <div class="form-group">
-                      <div class="input-group">                   
-                        <input placeholder="Login" name="login" type="text" id="login" maxlength="20" class="textBox" />
-                      </div>
-                    </div>
-                	
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Senha" name="senha" type="text" id="senha" maxlength="6" class="textBox" />
-                      </div>
-                    </div>
-                  
+                    
                     <div class="form-group">
                       <td>&nbsp;</td>
                       <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" onclick="return validar()" /></td>
@@ -308,32 +237,6 @@ function SomenteNumero(e){
           </form>
         </div>
       </div>
-
-          <!-- Modal -->
-          <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Alunos</h4>
-
-                  <div class="form-group">
-                      <div class="input-group" id="nome">
-                          <input type="text" class="form-control" id="name" placeholder="Nome">
-                           <button type="button" class="btn btn-primary" id="searchName"><i class="fa fa-search"></i></button>
-                      </div>
-                  </div>
-                </div>
-                <div class="modal-body">
-                  <?php include 'listar.php';?>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
     </div>
   </div>
 
