@@ -228,45 +228,17 @@ function SomenteNumero(e){
                   </div>
                   
                   <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="Sexo" name="sexo" type="text" id="sexo" maxlength="10" class="textBox" />
-                    </div>
+                      <div class="input-group">
+                        <span class="sexo">Sexo: </span>
+                        <input type="radio" name="tSexo" id="cMasc" value="0" /><label class="label-masc">Masculino</label>
+                        <input type="radio" name="tSexo" id="cFem" value="1" /><label>Feminino</label>
+                      </div>
                   </div>
           </div>
         	
              <div class="col-sm-6">
                   <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="CEP" name="cep" type="text" id="cep" maxlength="9" class="textBox" />
-                    </div>
-                  </div>
-                
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="Endere&ccedil;o" name="endereco" type="text" id="endereco" maxlength="45" class="textBox" />
-                    </div>
-                  </div>
-                
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="N&uacute;mero" name="numero" type="text" id="numero" maxlength="5" class="textBox" />
-                    </div>
-                  </div>
-                
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="Complemento" name="complementoEnd" type="text" id="complementoEnd" maxlength="45" class="textBox" />
-                    </div>
-                  </div>
-                
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="Status" name="statusUser" type="text" id="statusUser" maxlength="10" class="textBox" />
-                    </div>
-                  </div>
-                
-                  <div class="form-group">
-                    <div class="input-group">                   
+                    <div class="input-group">            
                       <input placeholder="Login" name="login" type="text" id="login" maxlength="20" class="textBox" />
                     </div>
                   </div>
@@ -275,6 +247,14 @@ function SomenteNumero(e){
                     <div class="input-group">
                       <input placeholder="Senha" name="senha" type="text" id="senha" maxlength="6" class="textBox" />
                     </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="input-group">
+                        <span class="sexo">Status: </span>
+                        <input type="radio" name="tStatus" id="cAtiv" value="0" /><label class="label-masc">Ativo</label>
+                        <input type="radio" name="tStatus" id="cInat" value="1" /><label>Inativo</label>
+                      </div>
                   </div>
                 
                   <div class="form-group">

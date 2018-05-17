@@ -47,3 +47,8 @@
 #cad-func .col-sm-12.form-func{
     margin-top: 20px;
 }
+
+#cad-func .sexo,
+#cad-func .label-masc{
+  padding-right: 10px;
+}

@@ -252,7 +252,9 @@ function SomenteNumero(e){
                   	
                   	<div class="form-group">
                       <div class="input-group">
-                        <input placeholder="Sexo" name="sexo" type="text" id="sexo" maxlength="10" class="textBox" />
+                        <span class="sexo">Sexo: </span>
+                        <input type="radio" name="tSexo" id="cMasc" value="0" /><label class="label-masc">Masculino</label>
+                        <input type="radio" name="tSexo" id="cFem" value="1" /><label>Feminino</label>
                       </div>
                     </div>
               </div>
@@ -283,12 +285,6 @@ function SomenteNumero(e){
                     </div>
                   
                     <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Status" name="statusUser" type="text" id="statusUser" maxlength="10" class="textBox" />
-                      </div>
-                    </div>
-                  
-                    <div class="form-group">
                       <div class="input-group">                   
                         <input placeholder="Login" name="login" type="text" id="login" maxlength="20" class="textBox" />
                       </div>
@@ -299,10 +295,17 @@ function SomenteNumero(e){
                         <input placeholder="Senha" name="senha" type="text" id="senha" maxlength="6" class="textBox" />
                       </div>
                     </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="sexo">Status: </span>
+                        <input type="radio" name="tStatus" id="cAtiv" value="0" /><label class="label-masc">Ativo</label>
+                        <input type="radio" name="tStatus" id="cInat" value="1" /><label>Inativo</label>
+                      </div>
+                    </div>
                   
                     <div class="form-group">
-                      <td>&nbsp;</td>
-                      <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" onclick="return validar()" /></td>
+                      <div><input type="submit" name="Submit" value="Salvar" class="btn-save" onclick="return validar()" /></div>
                     </div>
               </div>
           </form>
