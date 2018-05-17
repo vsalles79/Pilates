@@ -210,11 +210,11 @@ function SomenteNumero(e){
           <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvar.php">
               <div class="col-sm-6">
 
-                    <div class="form-group">
+                    <!--<div class="form-group">
                       <div class="input-group" id="name">
                         <input name="id-servico" type="text" id="id-servico" maxlength="45" class="textBox" placeholder="ID"/>
                       </div>
-                    </div>
+                    </div>-->
 
                     <div class="form-group">
                       <div class="input-group">

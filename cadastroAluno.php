@@ -27,7 +27,7 @@ if(mysql_errno() != 0) {
 <head>
   <title>Cadastro Aluno</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html" />
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -214,8 +214,8 @@ function SomenteNumero(e){
                       <div class="input-group" id="name">
                         <input name="nome" type="text" id="nome" maxlength="45" class="textBox" placeholder="Nome"/>
                       </div>
-                        <button type="button" class="btn btn-primary" id="search-name" data-toggle="modal" data-target="#myModal">
-                          <i class="fa fa-search"></i></button>
+                       <!-- <button type="button" class="btn btn-primary" id="search-name" data-toggle="modal" data-target="#myModal">
+                          <i class="fa fa-search"></i></button> -->
                     </div>
 
                 	
@@ -228,7 +228,7 @@ function SomenteNumero(e){
                 	
                     <div class="form-group">
                       <div class="input-group">
-                        <input  placeholder="cpf" name="cpf" type="text" id="cpf" maxlength="14" class="textBox" onkeypress='return SomenteNumero(event)' />
+                        <input  placeholder="CPF" name="cpf" type="text" id="cpf" maxlength="14" class="textBox" onkeypress='return SomenteNumero(event)' />
                       </div>
                     </div>
                        

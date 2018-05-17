@@ -191,8 +191,8 @@ function SomenteNumero(e){
                     <div class="input-group" id="name">
                       <input name="nome" type="text" id="nome" maxlength="45" class="textBox" placeholder="Nome"/>
                     </div>
-                      <button type="button" class="btn btn-primary" id="search-name" data-toggle="modal" data-target="#myModal">
-                        <i class="fa fa-search"></i></button>
+                      <!-- <button type="button" class="btn btn-primary" id="search-name" data-toggle="modal" data-target="#myModal">
+                          <i class="fa fa-search"></i></button> -->
                   </div>
 
                 
