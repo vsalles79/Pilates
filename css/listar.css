@@ -63,3 +63,8 @@
     vertical-align: middle;
     border-color: inherit;
 }
+
+#listar .card{
+  background: transparent;
+  border:none;  
+}

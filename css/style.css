@@ -3045,7 +3045,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid #c2cfd6; }
+  border: 3px solid #c2cfd6; }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }

@@ -27,7 +27,7 @@ if(mysql_errno() != 0) {
 <head>
   <title>Cadastro Aluno</title>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -188,14 +188,14 @@ function SomenteNumero(e){
             <ul class="menu-list">
               <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
               <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
-              <li><a href="aluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
+              <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
               <li>
                 <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
             <i class="fas fa-briefcase"></i></a>
                  <ul class="sub-menu">
                   <li><a href="cadastroAluno.php">Aluno</a></li>
                   <li><a href="cadastroFuncionario.php">Colaborador</a></li>
-                  <li><a href="servico.php">Serviço</a></li>
+                  <li><a href="servico.php">Servi&ccedil;o</a></li>
                 </ul>
               </li>
               <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a></li> -->

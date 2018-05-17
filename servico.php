@@ -188,7 +188,7 @@ function SomenteNumero(e){
             <ul class="menu-list">
               <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
               <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
-              <li><a href="aluno.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
+              <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
               <li>
                 <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
             <i class="fas fa-briefcase"></i></a>
