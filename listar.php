@@ -89,7 +89,7 @@
 					}
 
 					Abre_Conexao();
-					$re = mysql_query("SELECT * FROM usuarios ORDER BY usuarios.nome;");
+					$re = mysql_query("SELECT * FROM usuarios WHERE usuarios.statusUser = '0' ORDER BY usuarios.nome;");
 					if(mysql_errno() != 0) {
 						if(!isset($erros)) {
 							echo "Erro o arquivo init.php foi auterado, nao existe $erros";
@@ -100,10 +100,10 @@
 					}
 					?>
 
-					<table width="1600" border="1">
-						<tr>
-							<td>A&ccedil;&otilde;es</td>
-							<td>Nome</td>		
+					<table width="600" border="1">
+						<tr>							
+							<td>Nome</td>
+							<td>A&ccedil;&otilde;es</td>		
 						</tr>              
 				<?php
 				while($l = mysql_fetch_array($re)) {
@@ -112,11 +112,11 @@
 					
 				echo "
 					<tr>
+						<td>&nbsp;$nome</td>	
 						<td>
-							<a href=\"editar.php?id=$id\">[Editar]</a> 
-							<a href=\"excluir.php?id=$id\">[Excluir]</a> 							
-						</td>
-						<td>&nbsp;$nome</td>			
+							<a href=\"editarAluno.php?id=$id\">[Editar]</a> 
+							<a href=\"excluirAluno.php?id=$id\">[Excluir]</a> 							
+						</td>								
 					</tr>\n";
 				}	
 				@mysql_close();

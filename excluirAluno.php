@@ -1,5 +1,5 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "GET") {
+
 if(file_exists("init.php")) {
 	require "init.php";		
 } else {
@@ -12,14 +12,11 @@ if(!function_exists("Abre_Conexao")) {
 	exit;
 }
 $id = $_GET["id"];
-
 Abre_Conexao();
-if(mysql_query("delete from usuarios where id_usuario = $id")) {
+if(mysql_query("UPDATE usuarios set statusUSER = '1' where id_usuario = $id")) {
 	if(mysql_affected_rows() == 1){
 		echo "Registro deletado com sucesso<br />";
 	}	
-}	
 }
-
 ?>
 <a href="listar.php">Voltar</a>

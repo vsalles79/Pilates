@@ -10,17 +10,16 @@ if(!function_exists("Abre_Conexao")) {
   echo "Erro o arquivo init.php foi auterado, nao existe a função Abre_Conexao";
   exit;
 }
+$id = $_GET["id"];
 
 Abre_Conexao();
+$re    = mysql_query("SELECT count(*) as total FROM usuarios WHERE id_usuario = $id");  
+$total = mysql_result($re, 0, "total");
 
-if(mysql_errno() != 0) {
-  if(!isset($erros)) {
-    echo "Erro o arquivo init.php foi auterado, nao existe \$erros";
-    exit;
-  }
-  echo $erros[mysql_errno()];
-  exit;
-} 
+if($total == 1) {
+  $re    = mysql_query("SELECT * FROM usuarios WHERE usuarios.id_usuario = $id");
+  $dados = mysql_fetch_array($re);    
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -185,7 +184,7 @@ function SomenteNumero(e){
     <div class="tab-content">
       <div id="menu1">
         <div class="col-sm-12 form-aluno">
-          <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvar.php">
+          <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvar_edicao.php">
               <div class="col-sm-6">
 
                     <div class="form-group">
@@ -263,7 +262,7 @@ function SomenteNumero(e){
                   
                     <div class="form-group">
                       <div class="input-group">
-                        <input placeholder="Complemento" name="complementoEnd" type="text" id="complementoEnd" maxlength="45" class="textBox" value="<?php echo $dados["complemento"]; ?>" />
+                        <input placeholder="Complemento" name="complementoEnd" type="text" id="complementoEnd" maxlength="45" class="textBox" value="<?php echo $dados["complementoEnd"]; ?>" />
                       </div>
                     </div>
                   

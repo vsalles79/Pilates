@@ -5,14 +5,18 @@ $nome         = $_POST["nome"];
 $data         = $_POST["data"];
 $dataArray = explode("-", $data);
 $dataSql = $dataArray[2]."-".$dataArray[1]."-".$dataArray[0];
-$fone         = $_POST["fone"];
-$cpf          = $_POST["cpf"];
-$altura       = $_POST["altura"];
-$peso         = $_POST["peso"];
-$email 		  = $_POST["email"];
-$objetivo     = $_POST["objetivo"];
-$login        = $_POST["login"];
-$id           = $_POST["id"];
+$cpf            = $_POST["cpf"];
+$telefone       = $_POST["telefone"];
+$celular        = $_POST["celular"];
+$email 		    = $_POST["email"];
+$sexo           = $_POST["sexo"];
+$cep            = $_POST["cep"];
+$endereco       = $_POST["endereco"];
+$numero         = $_POST["numero"];
+$complementoEnd = $_POST["complementoEnd"];
+$statusUser     = $_POST["statusUser"];
+$login          = $_POST["login"];
+$senha		    = $_POST["senha"];
 
 
 if(file_exists("init.php")) {
@@ -23,7 +27,7 @@ if(file_exists("init.php")) {
 }
 
 if(!function_exists("Abre_Conexao")) {
-	echo "Erro o arquivo init.php foi auterado, nao existe a função Abre_Conexao";
+	echo "Erro o arquivo init.php foi auterado, nao existe a funÃ§Ã£o Abre_Conexao";
 	exit;
 }
 
@@ -40,7 +44,7 @@ if(@mysql_query("UPDATE usuarios SET nome = '$nome', data = '$dataSql' , fone = 
 		echo $erros[mysql_errno()];
 		exit;
 	} else {	
-		echo "Erro nao foi possivel efetuar a edição";
+		echo "Erro nao foi possivel efetuar a ediÃ§Ã£o";
 		exit;
 	}	
 	@mysql_close();

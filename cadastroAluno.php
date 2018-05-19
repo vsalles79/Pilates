@@ -299,8 +299,8 @@ function SomenteNumero(e){
                     <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Status: </span>
-                        <input type="radio" name="tStatus" id="cAtiv" value="0" /><label class="label-masc">Ativo</label>
-                        <input type="radio" name="tStatus" id="cInat" value="1" /><label>Inativo</label>
+                        <input type="radio" name="tStatus" id="statusUser" value="0" /><label class="label-masc">Ativo</label>
+                        <input type="radio" name="tStatus" id="statusUser" value="1" /><label>Inativo</label>
                       </div>
                     </div>
                   
