@@ -59,22 +59,6 @@
 	<div class="card">
 		<div class="card-body">
 			<table class="table table-responsive-sm table-striped" id="table">
-				<thead>
-					<tr role="row">
-						<th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-	                        colspan="1" aria-sort="ascending"
-	                        aria-label="Username: activate to sort column descending" style="width: 222px;">
-	                        Nome
-	                    </th>
-						<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-	                        colspan="1" aria-label="Actions: activate to sort column ascending"
-	                        style="width: 186px;">A&ccedil;&otilde;es
-	                    </th>		
-					</tr>
-				</thead>
-		        <tbody>
-
-		        </tbody>
 		        <?php
 					if(file_exists("init.php")) {
 						require "init.php";		
@@ -99,12 +83,19 @@
 						exit;
 					}
 					?>
-
-					<table width="600" border="1">
-						<tr>							
-							<td>Nome</td>
-							<td>A&ccedil;&otilde;es</td>		
-						</tr>              
+						<thead>
+							<tr role="row">
+								<th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-sort="ascending"
+			                        aria-label="Username: activate to sort column descending" style="width: 222px;">
+			                        Nome
+			                    </th>
+								<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-label="Actions: activate to sort column ascending"
+			                        style="width: 186px;">A&ccedil;&otilde;es
+			                    </th>		
+							</tr>
+						</thead>        
 				<?php
 				while($l = mysql_fetch_array($re)) {
 					$id           = $l["id_usuario"];
