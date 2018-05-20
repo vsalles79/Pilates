@@ -1,10 +1,8 @@
 <?php
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-$nome         = $_POST["nome"];
-$data         = $_POST["data"];
-$dataArray = explode("-", $data);
-$dataSql = $dataArray[2]."-".$dataArray[1]."-".$dataArray[0];
+$nome           = $_POST["nome"];
+$data           = $_POST["data"];
 $cpf            = $_POST["cpf"];
 $telefone       = $_POST["telefone"];
 $celular        = $_POST["celular"];
@@ -17,7 +15,6 @@ $complementoEnd = $_POST["complementoEnd"];
 $statusUser     = $_POST["statusUser"];
 $login          = $_POST["login"];
 $senha		    = $_POST["senha"];
-
 
 if(file_exists("init.php")) {
 	require "init.php";		
@@ -32,8 +29,7 @@ if(!function_exists("Abre_Conexao")) {
 }
 
 Abre_Conexao();
-if(@mysql_query("UPDATE usuarios SET nome = '$nome', data = '$dataSql' , fone = '$fone', cpf = '$cpf' , altura = '$altura' ,
- peso = '$peso' , email = '$email' , objetivo = '$objetivo' , login = '$login' WHERE id_usuario = $id")) {
+if(@mysql_query("UPDATE usuarios SET nome = '$nome', '$data', '$cpf', '$telefone', '$celular', '$email', '$sexo', '$cep', '$endereco', '$numero', '$complementoEnd', '$statusUser', '$login', '$senha' WHERE id_usuario = $id")) {
 
 	if(mysql_affected_rows() == 1){
 		echo "Registro atualizado com sucesso";
