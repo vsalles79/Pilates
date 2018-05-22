@@ -82,7 +82,6 @@ var sexo = form1.sexo.value;
 var cep = form1.cep.value;
 var endereco = form1.endereco.value;
 var numero = form1.numero.value;
-var complementoEnd = form1.complementoEnd.value;
 var statusUser = form1.statusUser.value;
 var login = form1.login.value;
 var senha = form1.senha.value;
@@ -137,11 +136,6 @@ alert('Preencha o campo Numero');
 form1.numero.focus();
 return false;
 }
-if (complementoEnd == "") {
-alert('Preencha o campo Complemento');
-form1.complementoEnd.focus();
-return false;
-}
 if (login == "") {
 alert('Preencha o campo Login');
 form1.login.focus();
@@ -171,9 +165,7 @@ function SomenteNumero(e){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://www.geradorcpf.com/jquery-1.2.6.pack.js"></script>
-  <script type="text/javascript" src="http://www.geradorcpf.com/jquery.maskedinput-1.1.4.pack.js"/></script>
-  <script type="text/javascript">$(document).ready(function(){	$("#cpf").mask("999.999.999-99");});</script>
+
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -221,10 +213,9 @@ function SomenteNumero(e){
                 	
                     <div class="form-group">
                       <div class="input-group">
-                        <input name="data" type="date" id="data" maxlength="10" class="textBox" placeholder="Data Nascimento" />
+                        <input name="data" type="text" id="data" maxlength="10" class="textBox" placeholder="Data Nascimento" />
                       </div>
                     </div>
-
                 	
                     <div class="form-group">
                       <div class="input-group">
@@ -253,8 +244,8 @@ function SomenteNumero(e){
                   	<div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Sexo: </span>
-                        <input type="radio" name="tSexo" id="cMasc" value="0" /><label class="label-masc">Masculino</label>
-                        <input type="radio" name="tSexo" id="cFem" value="1" /><label>Feminino</label>
+                        <input type="radio" name="sexo" id="cMasc" value="m" /><label class="label-masc">Masculino</label>
+                        <input type="radio" name="sexo" id="cFem" value="f" /><label>Feminino</label>
                       </div>
                     </div>
               </div>
@@ -262,7 +253,7 @@ function SomenteNumero(e){
               <div class="col-sm-6">
                     <div class="form-group">
                       <div class="input-group">
-                        <input placeholder="CEP" name="cep" type="text" id="cep" maxlength="9" class="textBox" />
+                        <input placeholder="CEP" name="cep" type="text" id="cep" maxlength="9" class="textBox" onkeypress='return SomenteNumero(event)'/>
                       </div>
                     </div>
                   
@@ -299,8 +290,8 @@ function SomenteNumero(e){
                     <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Status: </span>
-                        <input type="radio" name="tStatus" id="statusUser" value="0" /><label class="label-masc">Ativo</label>
-                        <input type="radio" name="tStatus" id="statusUser" value="1" /><label>Inativo</label>
+                        <input type="radio" name="statusUser" id="statusUser" value="0" /><label class="label-masc">Ativo</label>
+                        <input type="radio" name="statusUser" id="statusUser" value="1" /><label>Inativo</label>
                       </div>
                     </div>
                   
