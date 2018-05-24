@@ -166,7 +166,7 @@ function SomenteNumero(e){
               <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
               <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
               <li>
-                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
+                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Cadastros">
                 <i class="fas fa-briefcase"></i></a>
                  <ul class="sub-menu">
                   <li><a href="cadastroAluno.php">Aluno</a></li>
@@ -183,7 +183,7 @@ function SomenteNumero(e){
   <div class="tab-content">
     <div id="menu1">
       <div class="col-sm-12 form-func"> 
-        <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvarColaborador.php">
+        <form id="form1" name="form1" method="post" action="salvarColaborador.php">
           <div class="col-sm-6">
           
               <div class="form-group">
@@ -229,8 +229,8 @@ function SomenteNumero(e){
                   <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Sexo: </span>
-                        <input type="radio" name="tSexo" id="cMasc" value="0" /><label class="label-masc">Masculino</label>
-                        <input type="radio" name="tSexo" id="cFem" value="1" /><label>Feminino</label>
+                        <input type="radio" name="sexo" id="cMasc" value="m" /><label class="label-masc">Masculino</label>
+                        <input type="radio" name="sexo" id="cFem" value="f" /><label>Feminino</label>
                       </div>
                   </div>
           </div>
@@ -251,8 +251,8 @@ function SomenteNumero(e){
                   <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Status: </span>
-                        <input type="radio" name="tStatus" id="cAtiv" value="0" /><label class="label-masc">Ativo</label>
-                        <input type="radio" name="tStatus" id="cInat" value="1" /><label>Inativo</label>
+                        <input type="radio" name="statusUser" id="statusUser" value="0" /><label class="label-masc">Ativo</label>
+                        <input type="radio" name="statusUser" id="statusUser" value="1" /><label>Inativo</label>
                       </div>
                   </div>
                 

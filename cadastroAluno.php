@@ -182,7 +182,7 @@ function SomenteNumero(e){
               <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
               <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
               <li>
-                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
+                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Cadastros">
             <i class="fas fa-briefcase"></i></a>
                  <ul class="sub-menu">
                   <li><a href="cadastroAluno.php">Aluno</a></li>
@@ -199,7 +199,7 @@ function SomenteNumero(e){
     <div class="tab-content">
       <div id="menu1">
         <div class="col-sm-12 form-aluno">
-          <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvarAluno.php">
+          <form id="form1" name="form1" method="post" action="salvarAluno.php">
               <div class="col-sm-6">
 
                     <div class="form-group">
