@@ -98,7 +98,7 @@ return false;
     <div class="tab-content">
       <div id="menu1">
         <div class="col-sm-12 form-servico">
-          <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvarServico.php">
+          <form id="form2" name="form2" method="post" onsubmit="return verifica()" action="salvarServico.php">
               <div class="col-sm-6">
 
                     <!--<div class="form-group">
