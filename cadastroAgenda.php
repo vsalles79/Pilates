@@ -25,7 +25,7 @@ if(mysql_errno() != 0) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Cadastro Aluno</title>
+  <title>Agendamento</title>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" />
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -101,22 +101,39 @@ return false;
           <form id="form2" name="form2" method="post" onsubmit="return verifica()" action="salvarServico.php">
               <div class="col-sm-6">
 
-                    <!--<div class="form-group">
+                     <div class="form-group">
                       <div class="input-group" id="name">
-                        <input name="id-servico" type="text" id="id-servico" maxlength="45" class="textBox" placeholder="ID"/>
-                      </div>
-                    </div>-->
-
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input name="descricao" type="text" id="descricao-servico" maxlength="10" class="textBox" placeholder="Descrição" />
+                        <input name="nome" type="text" id="nome" maxlength="45" class="textBox" placeholder="Nome"/>
                       </div>
                     </div>
 
                     <div class="form-group">
                       <div class="input-group">
+                        <input name="data" type="text" id="data" maxlength="10" class="textBox" placeholder="Data" />
+                      </div>
+                    </div>
 
-                        <input name="valor" type="text" id="valor-servico" maxlength="10" class="textBox" placeholder="Valor serviço" />
+                   <div class="form-group">
+                      <div class="input-group">
+                        <input name="horarioI" type="time" id="Itime" maxlength="10" class="textBox" placeholder="Horario de Inicio" />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input name="horarioT" type="time" id="Ttime" maxlength="10" class="textBox" placeholder="Horario de Termino" />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input name="servico" type="text" id="servico" maxlength="10" class="textBox" placeholder="Serviço" />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input name="colaborador" type="text" id="colaborador" maxlength="10" class="textBox" placeholder="Colaborador" />
                       </div>
                     </div>
                     

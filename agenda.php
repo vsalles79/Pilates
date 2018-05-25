@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lista ALunos</title>
+	<title>Agenda</title>
 	<meta charset="utf-8">
   	<meta http-equiv="Content-Type" content="text/html" />
 
