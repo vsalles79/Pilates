@@ -1,8 +1,12 @@
 <?php
   
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-$descricao           = $_POST["descricao"];
-$valor               = $_POST["valor"];
+$nome        	  = $_POST["nome"];
+$data         	  = $_POST["data"];
+$horaInicial      = $_POST["horaInicial"];
+$horaFinal        = $_POST["horaFinal"];
+$nomeFuncionario  = $_POST["nomeFuncionario"];
+$servico 	 	  = $_POST["servico"];
 
 if(file_exists("init.php")) {
 	require "init.php";		
@@ -17,7 +21,7 @@ if(!function_exists("Abre_Conexao")) {
 }
 
 Abre_Conexao();
-if(@mysql_query("INSERT INTO servicos VALUES (  NULL , '$descricao', '$valor' )")){
+if(@mysql_query("INSERT INTO agenda VALUES (  NULL , '$nome', '$data' , '$horaInicial' , '$horaFinal' , '$nomeFuncionario' , '$servico' )")){
 
 	if(mysql_affected_rows() == 1){
 		echo "Registro efetuado com sucesso";
@@ -36,4 +40,4 @@ if(@mysql_query("INSERT INTO servicos VALUES (  NULL , '$descricao', '$valor' )"
 
 }
 ?>
-<a href="listar.php">Voltar</a>
+<a href="agenda.php">Voltar</a>
