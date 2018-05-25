@@ -139,7 +139,7 @@ return false;
                     
                     <div class="form-group">
                       <td>&nbsp;</td>
-                      <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" onclick="return validar()" /></td>
+                      <td><input type="submit" name="Submit" value="Agendar" style="cursor:pointer;" onclick="return validar()" /></td>
                     </div>
               </div>
           </form>
