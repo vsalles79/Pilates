@@ -157,6 +157,11 @@ if($total == 1) {
                       <td>&nbsp;</td>
                       <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></td>
                     </div>
+
+                    <div class="form-group">
+                      <td>&nbsp;</td>
+                      <a href="listar.php"><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></a>
+                    </div>
               </div>
           </form>
         </div>
