@@ -1,7 +1,7 @@
 <?php
   
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-$nome        	  = $_POST["nome"];
+$nome        	  = $_POST["nomeAluno"];
 $data         	  = $_POST["data"];
 $horaInicial      = $_POST["horaInicial"];
 $horaFinal        = $_POST["horaFinal"];
@@ -21,8 +21,7 @@ if(!function_exists("Abre_Conexao")) {
 }
 
 Abre_Conexao();
-
-if(@mysql_query("INSERT INTO agenda VALUES (  NULL , '$nome', '$data' , '$horaInicial' , '$horaFinal' , '$nomeFuncionario' , '$servico' )")){
+if(@mysql_query("INSERT INTO agenda VALUES (  NULL , '$nome', '$data' , '$horaInicial' , '$horaFinal' , '$nomeFuncionario' , '$servico', '0' )")){
 
 	if(mysql_affected_rows() == 1){
 		echo "Registro efetuado com sucesso";

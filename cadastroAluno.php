@@ -176,7 +176,7 @@ function SomenteNumero(e){
   <div class="container">
     <div class="row">
       <div class="col-md-12" id="menuTab">
- <div class="menu">
+            <div class="menu">
             <ul class="menu-list">
               <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
               <li><a href="agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
@@ -187,7 +187,7 @@ function SomenteNumero(e){
                  <ul class="sub-menu">
                   <li><a href="cadastroAluno.php">Aluno</a></li>
                   <li><a href="cadastroFuncionario.php">Colaborador</a></li>
-                  <li><a href="servico.php">Serviço</a></li>
+                  <li><a href="servico.php">Servi&ccedil;o</a></li>
                 </ul>
               </li>
               <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a></li> -->
@@ -303,10 +303,10 @@ function SomenteNumero(e){
         </div>
       </div>
 
-          <!-- Modal -->
+          <!-- Modal
           <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
-              <!-- Modal content-->
+              
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -327,7 +327,7 @@ function SomenteNumero(e){
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
     </div>
   </div>
 
