@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lista ALunos</title>
+	<title>Agendamento</title>
 	<meta charset="utf-8">
   	<meta http-equiv="Content-Type" content="text/html" />
 
@@ -74,7 +74,7 @@
 					}
 
 					Abre_Conexao();
-					$re = mysql_query("SELECT * FROM usuarios WHERE usuarios.statusUser = '0' ORDER BY usuarios.nome;");
+					$re = mysql_query("SELECT * FROM agenda WHERE agenda.statusAgenda = '0' ORDER BY agenda.data");
 					if(mysql_errno() != 0) {
 						if(!isset($erros)) {
 							echo "Erro o arquivo init.php foi auterado, nao existe $erros";
@@ -88,29 +88,67 @@
 							<tr role="row">
 								<th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
 			                        colspan="1" aria-sort="ascending"
-			                        aria-label="Username: activate to sort column descending" style="width: 222px;">
+			                        aria-label="Username: activate to sort column descending" style="width: 230px;">
 			                        Nome
 			                    </th>
 								<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
 			                        colspan="1" aria-label="Actions: activate to sort column ascending"
-			                        style="width: 186px;">A&ccedil;&otilde;es
-			                    </th>		
+			                        style="width: 186px;">
+			                        Data
+			                    </th>
+			                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-label="Actions: activate to sort column ascending"
+			                        style="width: 186px;">
+			                        Hora Inicial
+			                    </th>
+			                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-label="Actions: activate to sort column ascending"
+			                        style="width: 186px;">
+			                        Hora Termino
+			                    </th>
+			                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-label="Actions: activate to sort column ascending"
+			                        style="width: 186px;">
+			                        Instrutor
+			                    </th>
+			                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-label="Actions: activate to sort column ascending"
+			                        style="width: 186px;">
+			                        Servi&ccedil;o
+			                    </th>
+			                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+			                        colspan="1" aria-label="Actions: activate to sort column ascending"
+			                        style="width: 186px;">
+			                        Cancelar Aula
+			                    </th>	
 							</tr>
 						</thead>        
 				<?php
 				while($l = mysql_fetch_array($re)) {
-					$id           = $l["id_usuario"];
-					$nome         = $l["nome"];		
+					$nome       	  = $l["nome"];
+					$data       	  = $l["data"];
+					$dataFormat		  = date("d-m-Y", strtotime($data));
+					$horaInicial      = $l["horaInicial"];
+					$horaI  		  = date("H:y", strtotime($horaInicial));	
+					$horaFinal        = $l["horaFinal"];
+					$horaF  		  = date("H:y", strtotime($horaFinal));
+					$nomeFuncionario  = $l["nomeFuncionario"];
+					$servico          = $l["servico"];
+
 					
 				echo "
 					<tr>
-						<td>&nbsp;$nome</td>	
-						<td>
-							<a href=\"editarAluno.php?id=$id\">[Editar]</a> 
-							<a href=\"excluirAluno.php?id=$id\">[Excluir]</a> 							
-						</td>								
+						<td>$nome</td>
+						<td>$dataFormat</td>
+						<td>$horaI</td>
+						<td>$horaF</td>
+						<td>$nomeFuncionario</td>
+						<td>$servico</td>
+						<td>						
+						<a href=\"cancelarAgenda.php?nome=$nome\">[Cancelar]</a> 							
+						</td>
 					</tr>\n";
-				}	
+					}	
 				@mysql_close();
 				?>	
 			</table>

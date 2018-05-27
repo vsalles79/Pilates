@@ -21,11 +21,15 @@ if(mysql_errno() != 0) {
 	echo $erros[mysql_errno()];
 	exit;
 }	
+
+$query1 = mysql_query("SELECT nome FROM usuarios");
+$query2 = mysql_query("SELECT nome FROM usuarios");
+$query3 = mysql_query("SELECT descricao FROM servicos");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Cadastro Aluno</title>
+  <title>Cadastro Agenda</title>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" />
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -42,24 +46,6 @@ if(mysql_errno() != 0) {
     -->
   </style>
 
-</script>
-<script language="javascript" type="text/javascript">
-function validar() {
-var descricao = form1.descricao.value;
-var valor = form1.valor.value;
-
-if (descricao == "") {
-alert('Preencha o campo Descricao');
-form1.descricao.focus();
-return false;
-}
-if (valor == "") {
-alert('Preencha o campo Valor');
-form1.valor.focus();
-return false;
-}
-}
-</script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bootstrap-dynamic-tabs/bootstrap-dynamic-tabs.css">
@@ -98,7 +84,7 @@ return false;
     <div class="tab-content">
       <div id="menu1">
         <div class="col-sm-12 form-servico">
-          <form id="form2" name="form2" method="post" onsubmit="return verifica()" action="salvarServico.php">
+          <form id="form2" name="form2" method="post" onsubmit="return verifica()" action="salvarAgenda.php">
               <div class="col-sm-6">
 
                     <!--<div class="form-group">
@@ -108,15 +94,54 @@ return false;
                     </div>-->
 
                     <div class="form-group">
-                      <div class="input-group">
-                        <input name="descricao" type="text" id="descricao-servico" maxlength="10" class="textBox" placeholder="Descrição" />
+                      <div class="input-group"> 
+
+                         <select name="nomeAluno" id="nomeAluno">
+                             <option>Nome Aluno...</option>                             
+                             <?php while($dados = mysql_fetch_array($query1)) { ?>
+                             <option value="<?php echo $dados['nome'] ?>"><?php echo $dados['nome'] ?></option>
+                             <?php } ?>                             
+                          </select>                         
                       </div>
                     </div>
 
                     <div class="form-group">
                       <div class="input-group">
+                        <input name="data" type="date" id="data" maxlength="10" class="textBox" placeholder="data" />
+                      </div>
+                    </div>
 
-                        <input name="valor" type="text" id="valor-servico" maxlength="10" class="textBox" placeholder="Valor serviço" />
+                     <div class="form-group">
+                      <div class="input-group">
+                        <input name="horaInicial" type="time" id="horaInicial" maxlength="10" class="textBox" placeholder="Hora Inicial" />
+                      </div>
+                    </div>
+
+                     <div class="form-group">
+                      <div class="input-group">
+                        <input name="horaFinal" type="time" id="horaFinal" maxlength="10" class="textBox" placeholder="Horal Final" />
+                      </div>
+                    </div>
+
+                     <div class="form-group">
+                      <div class="input-group">
+                         <select name="nomeFuncionario" id="nomeFuncionario">
+                             <option>Instrutor...</option>                             
+                             <?php while($dados = mysql_fetch_array($query2)) { ?>
+                             <option value="<?php echo $dados['nome'] ?>"><?php echo $dados['nome'] ?></option>
+                             <?php } ?>                             
+                          </select> 
+                      </div>
+                    </div>
+
+                     <div class="form-group">
+                      <div class="input-group">
+                         <select name="servico"id ="servico">
+                             <option>Servico...</option>                             
+                             <?php while($dados = mysql_fetch_array($query3)) { ?>
+                             <option value="<?php echo $dados['descricao'] ?>"><?php echo $dados['descricao'] ?></option>
+                             <?php } ?>                             
+                          </select> 
                       </div>
                     </div>
                     

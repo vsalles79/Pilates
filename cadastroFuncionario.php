@@ -29,8 +29,6 @@ if(mysql_errno() != 0) {
   <title>Cadastro Funcionario</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="http://www.geradorcpf.com/jquery-1.2.6.pack.js"></script>
-  <script type="text/javascript" src="http://www.geradorcpf.com/jquery.maskedinput-1.1.4.pack.js"/></script>
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -76,13 +74,14 @@ if(mysql_errno() != 0) {
 function validar() {
 var nome = form1.nome.value;
 var data = form1.data.value;
-var fone = form1.fone.value;
 var cpf = form1.cpf.value;
-var altura = form1.altura.value;
-var peso = form1.peso.value;
+var telefone = form1.telefone.value;
+var celular = form1.celular.value;
 var email = form1.email.value;
-var objetivo = form1.objetivo.value;
+var sexo = form1.sexo.value;
+var statusUser = form1.statusUser.value;
 var login = form1.login.value;
+var senha = form1.senha.value;
 
 if (nome == "") {
 alert('Preencha o campo nome');
@@ -94,24 +93,19 @@ alert('Preencha o campo Data Nascimento');
 form1.data.focus();
 return false;
 }
-if (fone == "") {
-alert('Preencha o campo Celular');
-form1.fone.focus();
-return false;
-}
 if (cpf == "") {
 alert('Preencha o campo CPF');
 form1.cpf.focus();
 return false;
 }
-if (altura == "") {
-alert('Preencha o campo Altura');
-form1.altura.focus();
+if (telefone == "") {
+alert('Preencha o campo Telefone');
+form1.telefone.focus();
 return false;
 }
-if (peso == "") {
-alert('Preencha o campo Peso');
-form1.peso.focus();
+if (celular == "") {
+alert('Preencha o campo Celular');
+form1.celular.focus();
 return false;
 }
 if (email == "") {
@@ -119,14 +113,19 @@ alert('Preencha o campo Email');
 form1.email.focus();
 return false;
 }
-if (objetivo == "") {
-alert('Preencha o campo Objetivo');
-form1.objetivo.focus();
+if (sexo == "") {
+alert('Preencha o campo Sexo');
+form1.sexo.focus();
 return false;
 }
 if (login == "") {
 alert('Preencha o campo Login');
 form1.login.focus();
+return false;
+}
+if (senha == "") {
+alert('Preencha o campo Senha');
+form1.Senha.focus();
 return false;
 }
 }
@@ -164,10 +163,10 @@ function SomenteNumero(e){
             <div class="menu">
             <ul class="menu-list">
               <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
-              <li><a href="../agenda/agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
+              <li><a href="agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
               <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
               <li>
-                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Serviço">
+                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Cadastros">
                 <i class="fas fa-briefcase"></i></a>
                  <ul class="sub-menu">
                   <li><a href="cadastroAluno.php">Aluno</a></li>
@@ -184,7 +183,7 @@ function SomenteNumero(e){
   <div class="tab-content">
     <div id="menu1">
       <div class="col-sm-12 form-func"> 
-        <form id="form1" name="form1" method="post" onsubmit="return verifica()" action="salvar.php">
+        <form id="form1" name="form1" method="post" action="salvarColaborador.php">
           <div class="col-sm-6">
           
               <div class="form-group">
@@ -230,8 +229,8 @@ function SomenteNumero(e){
                   <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Sexo: </span>
-                        <input type="radio" name="tSexo" id="cMasc" value="0" /><label class="label-masc">Masculino</label>
-                        <input type="radio" name="tSexo" id="cFem" value="1" /><label>Feminino</label>
+                        <input type="radio" name="sexo" id="cMasc" value="m" /><label class="label-masc">Masculino</label>
+                        <input type="radio" name="sexo" id="cFem" value="f" /><label>Feminino</label>
                       </div>
                   </div>
           </div>
@@ -252,8 +251,8 @@ function SomenteNumero(e){
                   <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Status: </span>
-                        <input type="radio" name="tStatus" id="cAtiv" value="0" /><label class="label-masc">Ativo</label>
-                        <input type="radio" name="tStatus" id="cInat" value="1" /><label>Inativo</label>
+                        <input type="radio" name="statusUser" id="statusUser" value="0" /><label class="label-masc">Ativo</label>
+                        <input type="radio" name="statusUser" id="statusUser" value="1" /><label>Inativo</label>
                       </div>
                   </div>
                 
