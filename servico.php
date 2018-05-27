@@ -87,6 +87,7 @@ return false;
                   <li><a href="cadastroAluno.php">Aluno</a></li>
                   <li><a href="cadastroFuncionario.php">Colaborador</a></li>
                   <li><a href="servico.php">Serviço</a></li>
+                  <li><a href="cadastroAgenda.php">Agendamento</a></li>
                 </ul>
               </li>
               <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a></li> -->
