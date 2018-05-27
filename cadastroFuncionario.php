@@ -171,7 +171,7 @@ function SomenteNumero(e){
                  <ul class="sub-menu">
                   <li><a href="cadastroAluno.php">Aluno</a></li>
                   <li><a href="cadastroFuncionario.php">Colaborador</a></li>
-                  <li><a href="servico.php">Serviço</a></li>
+                  <li><a href="servico.php">Servi&ccedil;o</a></li>
                   <li><a href="cadastroAgenda.php">Agendamento</a></li>
                 </ul>
               </li>

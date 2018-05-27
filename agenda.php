@@ -18,9 +18,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/listar.css">	
+    <link rel="stylesheet" type="text/css" href="css/agenda.css">	
 </head>
-<body id="listar">
+<body id="listar-agenda">
 	<script language="JavaScript">
 		function abrir(URL) {
 

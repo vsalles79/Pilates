@@ -1,4 +1,4 @@
-#listar{
+#listar-agenda{
     background-color: #5697cf;
 }
 
@@ -64,11 +64,12 @@
     border-color: inherit;
 }
 
-#listar #table tbody td{
+#listar-agenda #table tbody td{
+    text-transform: capitalize;
     font-weight: bolder;
 }
 
-#listar .card{
+#listar-agenda .card{
   background: transparent;
   border:none;  
 }
