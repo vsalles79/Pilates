@@ -195,12 +195,11 @@ function SomenteNumero(e){
                           <i class="fa fa-search"></i></button> -->
                   </div>
 
-                
                   <div class="form-group">
-                    <div class="input-group">
-                      <input name="data" type="date" id="data" maxlength="10" class="textBox" placeholder="Data Nascimento" />
+                      <div class="input-group">
+                        <input name="data" type="text" id="data" maxlength="10" class="textBox" placeholder="Data Nascimento" />
+                      </div>
                     </div>
-                  </div>
 
                 
                   <div class="form-group">
