@@ -1248,7 +1248,9 @@ pre {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #c2cfd6; }
+    border-top: 1px solid #c2cfd6;
+    text-transform: capitalize;
+    font-weight: bolder; }
   .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #c2cfd6; }
@@ -9705,3 +9707,4 @@ hr.transparent {
 .btn-save{
   cursor: pointer;
 }
+
