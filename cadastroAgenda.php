@@ -22,14 +22,16 @@ if(mysql_errno() != 0) {
 	exit;
 }	
 
+
 $query1 = mysql_query("SELECT nome FROM usuarios");
 $query2 = mysql_query("SELECT nome FROM usuarios");
 $query3 = mysql_query("SELECT descricao FROM servicos");
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Cadastro Agenda</title>
+  <title>Agendamento</title>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" />
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -45,6 +47,25 @@ $query3 = mysql_query("SELECT descricao FROM servicos");
     .textBox { border:1px solid gray; width:300px;} 
     -->
   </style>
+
+</script>
+<script language="javascript" type="text/javascript">
+function validar() {
+var descricao = form1.descricao.value;
+var valor = form1.valor.value;
+
+if (descricao == "") {
+alert('Preencha o campo Descricao');
+form1.descricao.focus();
+return false;
+}
+if (valor == "") {
+alert('Preencha o campo Valor');
+form1.valor.focus();
+return false;
+}
+}
+</script>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">

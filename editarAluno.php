@@ -48,30 +48,6 @@ if($total == 1) {
 
 <body id="cad-aluno">
   <div class="container">
-
-    <div class="row">
-      <div class="col-md-12" id="menuTab">
-            <div class="menu">
-            <ul class="menu-list">
-              <li><a href="home.html" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
-              <li><a href="agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
-              <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
-              <li>
-                <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Cadastros">
-            <i class="fas fa-briefcase"></i></a>
-                 <ul class="sub-menu">
-                  <li><a href="cadastroAluno.php">Aluno</a></li>
-                  <li><a href="cadastroFuncionario.php">Colaborador</a></li>
-                  <li><a href="servico.php">Servi&ccedil;o</a></li>
-                  <li><a href="cadastroAgenda.php">Agendamento</a></li>
-                </ul>
-              </li>
-              <!-- <li><a href="relatorio.html" id="btnReport" class="btn btn-warning" role="button" title="Relatório"><i class="fas fa-clipboard"></i></a></li> -->
-            </ul>
-          </div>
-      </div>
-  </div>
-
     <div class="tab-content">
       <div id="menu1">
         <div class="col-sm-12 form-aluno">
@@ -126,8 +102,8 @@ if($total == 1) {
                     <div class="form-group">
                       <div class="input-group">
                         <span class="sexo">Sexo: </span>
-                        <input type="radio" name="sexo" id="sexo" value="m" <?php echo ($dados["sexo"]=='m')?"checked":"";?> /><label class="label-masc">Masculino</label>
-                        <input type="radio" name="sexo" id="sexo" value="f" <?php echo ($dados["sexo"]=='f')?"checked":"";?> /><label>Feminino</label>
+                        <input type="radio" name="sexo" id="cMasc" value="m" <?php echo ($dados["sexo"]=='m')?"checked":"";?> /><label class="label-masc">Masculino</label>
+                        <input type="radio" name="sexo" id="cFem" value="f" <?php echo ($dados["sexo"]=='f')?"checked":"";?> /><label>Feminino</label>
                       </div>
                     </div>
               </div>
@@ -180,6 +156,11 @@ if($total == 1) {
                     <div class="form-group">
                       <td>&nbsp;</td>
                       <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></td>
+                    </div>
+
+                    <div class="form-group">
+                      <td>&nbsp;</td>
+                      <a href="listar.php"><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></a>
                     </div>
               </div>
           </form>
