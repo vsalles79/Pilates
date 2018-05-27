@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-	<title>Agendamento</title>
-=======
 	<title>Agenda</title>
->>>>>>> 1ecf34c14d0f001b5e47867f74f27514ed903b6d
 	<meta charset="utf-8">
   	<meta http-equiv="Content-Type" content="text/html" />
 
