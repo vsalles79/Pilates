@@ -129,9 +129,9 @@
 					$data       	  = $l["data"];
 					$dataFormat		  = date("d-m-Y", strtotime($data));
 					$horaInicial      = $l["horaInicial"];
-					$horaI  		  = date("H:y", strtotime($horaInicial));	
+					$horaI  		  = date("H:i", strtotime($horaInicial));	
 					$horaFinal        = $l["horaFinal"];
-					$horaF  		  = date("H:y", strtotime($horaFinal));
+					$horaF  		  = date("H:i", strtotime($horaFinal));
 					$nomeFuncionario  = $l["nomeFuncionario"];
 					$servico          = $l["servico"];
 
