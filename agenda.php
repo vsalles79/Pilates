@@ -145,7 +145,7 @@
 						<td>$nomeFuncionario</td>
 						<td>$servico</td>
 						<td>						
-						<a href=\"cancelarAgenda.php?nome=$nome\">[Cancelar]</a> 							
+						<a href=\"cancelarAgenda.php?nome=$nome\">Cancelar</a> 							
 						</td>
 					</tr>\n";
 					}	

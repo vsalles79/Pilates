@@ -158,3 +158,8 @@
     font-weight: bolder;
     color: #000;
 }
+
+#home .card-body .title-agenda {
+    text-transform: uppercase;
+    color: #000;
+}

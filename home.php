@@ -51,6 +51,7 @@
 		</script>
 			<div class="card">
 				<div class="card-body">
+					<h1 class="title-agenda">Agenda</h1>
 					<table class="table table-responsive-sm table-striped" id="table">
 				        <?php
 							if(file_exists("init.php")) {
@@ -137,7 +138,7 @@
 								<td>$nomeFuncionario</td>
 								<td>$servico</td>
 								<td>						
-								<a href=\"cancelarAgenda.php?nome=$nome\">[Cancelar]</a> 							
+								<a href=\"cancelarAgenda.php?nome=$nome\">Cancelar</a> 							
 								</td>
 							</tr>\n";
 							}	

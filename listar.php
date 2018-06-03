@@ -123,8 +123,8 @@
 						<td>&nbsp;$celular</td>
 						<td>&nbsp;$email</td>	
 						<td>
-							<a href=\"editarAluno.php?id=$id\">[Editar]</a> 
-							<a href=\"excluirAluno.php?id=$id\">[Excluir]</a> 							
+							<a href=\"editarAluno.php?id=$id\">Editar</a> 
+							<a href=\"excluirAluno.php?id=$id\">Excluir</a> 							
 						</td>								
 					</tr>\n";
 				}	
