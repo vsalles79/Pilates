@@ -117,7 +117,7 @@
   position: absolute;
   top: 50px;
   left: -50px;
-  background: transparent;
+  background: #5697cf;
   border: solid 1px #000;
   min-width: 200px;
   z-index: 1000;
@@ -137,4 +137,24 @@
   visibility: hidden;
   line-height: 0;
   height: 0;
+}
+
+#home .card{
+  background: transparent;
+  border: none;
+}
+
+#table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #c2cfd6;
+    padding: 0.35rem;
+    border-top: 1px solid #c2cfd6;
+    color: #000;
+}
+
+#home #table tbody td,
+#home #table tbody td a {
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: #000;
 }
