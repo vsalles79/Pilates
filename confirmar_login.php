@@ -22,7 +22,7 @@ $contagem = mysql_num_rows($query);
 if ( $contagem == 1 ) {	
   setcookie ("login", $login, time()+900); //grava o cookie com o login
   setcookie ("senha", $senha, time()+900); //grava o cookie com a senha
-   header("Location: home.html"); //se a senha digitada está correta, mostra a mensagem
+   header("Location: home.php"); //se a senha digitada está correta, mostra a mensagem
   } else {
   
   }
