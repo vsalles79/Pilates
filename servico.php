@@ -116,7 +116,6 @@ return false;
 
                     <div class="form-group">
                       <div class="input-group">
-
                         <input name="valor" type="text" id="valor-servico" maxlength="10" class="textBox" placeholder="Valor serviço" />
                       </div>
                     </div>
