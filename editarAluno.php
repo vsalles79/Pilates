@@ -48,12 +48,32 @@ if($total == 1) {
 
 <body id="cad-aluno">
   <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="menuTab">
+                <div class="menu">
+                  <ul class="menu-list">
+                    <li><a href="home.php" id="btnHome" class="btn btn-info" role="button" title="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="agenda.php" id="btnAgenda" class="btn btn-danger" role="button" title="Agenda"><i class="fas fa-calendar-alt"></i></a></li>
+                    <li><a href="listar.php" id="btnAluno" class="btn btn-primary" role="button" title="Aluno"><i class="fas fa-user"></i></a></li>
+                    <li>
+                      <a href="#" id="btnReport" class="btn btn-warning" role="button" title="Cadastros">
+                      <i class="fas fa-briefcase"></i></a>
+                       <ul class="sub-menu">
+                        <li><a href="cadastroAluno.php">Aluno</a></li>
+                        <li><a href="cadastroFuncionario.php">Colaborador</a></li>
+                        <li><a href="servico.php">Serviço</a></li>
+                        <li><a href="cadastroAgenda.php">Agendamento</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+        </div>
     <div class="tab-content">
       <div id="menu1">
         <div class="col-sm-12 form-aluno">
           <form id="form1" name="form1" method="post" action="salvar_edicao.php">
               <div class="col-sm-6">
-
                     <div class="form-group">
                       <div class="input-group" id="name">
                         <input name="nome" type="text" id="nome" maxlength="45" class="textBox" placeholder="Nome"  value="<?php echo $dados["nome"]; ?>"/>
@@ -156,11 +176,6 @@ if($total == 1) {
                     <div class="form-group">
                       <td>&nbsp;</td>
                       <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></td>
-                    </div>
-
-                    <div class="form-group">
-                      <td>&nbsp;</td>
-                      <a href="listar.php"><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></a>
                     </div>
               </div>
           </form>
