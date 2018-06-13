@@ -11,7 +11,7 @@ $db			=	mysql_connect ($host, $login_db, $senha_db); //conecta ao mysql
 $basedados	=	mysql_select_db($database); //conecta a base de dados
 
 $sql = "SELECT login, senha
-        FROM usuarios
+        FROM colaborador
         WHERE login = '$login' AND senha = '$senha'";
 
 	

@@ -74,7 +74,7 @@
 					}
 
 					Abre_Conexao();
-					$re = mysql_query("SELECT * FROM agenda WHERE agenda.statusAgenda = '0' ORDER BY agenda.data");
+					$re = mysql_query("SELECT * FROM agenda WHERE agenda.statusAgenda = '0' ORDER BY agenda.data DESC");
 					if(mysql_errno() != 0) {
 						if(!isset($erros)) {
 							echo "Erro o arquivo init.php foi auterado, nao existe $erros";

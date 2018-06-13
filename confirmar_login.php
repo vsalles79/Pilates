@@ -10,7 +10,7 @@ $db			=	mysql_connect ($host, $login_db, $senha_db); //conecta ao mysql
 $basedados	=	mysql_select_db($database); //conecta a base de dados
 
 $sql = "SELECT login, senha, nome
-        FROM usuarios
+        FROM colaborador
         WHERE login = '$login' AND senha = '$senha'";
 
 $query = mysql_query($sql);
@@ -20,8 +20,8 @@ $query = mysql_query($sql);
 $contagem = mysql_num_rows($query); 
   
 if ( $contagem == 1 ) {	
-  setcookie ("login", $login, time()+900); //grava o cookie com o login
-  setcookie ("senha", $senha, time()+900); //grava o cookie com a senha
+  setcookie ("login", $login, time()+90000); //grava o cookie com o login
+  setcookie ("senha", $senha, time()+90000); //grava o cookie com a senha
    header("Location: home.php"); //se a senha digitada está correta, mostra a mensagem
   } else {
   
