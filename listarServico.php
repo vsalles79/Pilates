@@ -106,7 +106,8 @@
 						</thead>        
 				<?php
 				while($l = mysql_fetch_array($re)) {
-					$descricao         = $l["descricao"];
+					$id         = $l["id_servico"];
+					$descricao  = $l["descricao"];
 					$valor      = $l["valor"];
 					
 				echo "

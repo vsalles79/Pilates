@@ -23,7 +23,7 @@ if(mysql_errno() != 0) {
 }	
 
 $query1 = mysql_query("SELECT nome FROM usuarios");
-$query2 = mysql_query("SELECT nome FROM usuarios");
+$query2 = mysql_query("SELECT nome FROM colaborador");
 $query3 = mysql_query("SELECT descricao FROM servicos");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

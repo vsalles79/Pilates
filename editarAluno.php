@@ -7,9 +7,10 @@ if(file_exists("init.php")) {
 }
 
 if(!function_exists("Abre_Conexao")) {
-  echo "Erro o arquivo init.php foi auterado, nao existe a função Abre_Conexao";
+  echo "Erro o arquivo init.php foi auterado, nao existe a funÃ§Ã£o Abre_Conexao";
   exit;
 }
+
 $id = $_GET["id"];
 
 Abre_Conexao();

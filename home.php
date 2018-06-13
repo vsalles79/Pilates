@@ -67,7 +67,7 @@
 							}
 
 							Abre_Conexao();
-							$re = mysql_query("SELECT * FROM agenda WHERE agenda.statusAgenda = '0' ORDER BY agenda.data");
+							$re = mysql_query("SELECT * FROM agenda WHERE agenda.statusAgenda = '0' ORDER BY agenda.data DESC");
 							if(mysql_errno() != 0) {
 								if(!isset($erros)) {
 									echo "Erro o arquivo init.php foi auterado, nao existe $erros";
@@ -109,11 +109,7 @@
 					                        style="width: 186px;">
 					                        Servi&ccedil;o
 					                    </th>
-					                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-					                        colspan="1" aria-label="Actions: activate to sort column ascending"
-					                        style="width: 186px;">
-					                        Cancelar Aula
-					                    </th>	
+					                  	
 									</tr>
 								</thead>        
 						<?php
@@ -137,9 +133,7 @@
 								<td>$horaF</td>
 								<td>$nomeFuncionario</td>
 								<td>$servico</td>
-								<td>						
-								<a href=\"cancelarAgenda.php?nome=$nome\">Cancelar</a> 							
-								</td>
+								
 							</tr>\n";
 							}	
 						@mysql_close();
