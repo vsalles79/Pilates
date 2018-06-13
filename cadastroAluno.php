@@ -220,8 +220,8 @@ function SomenteNumero(e){
                     </div>
                 	
                     <div class="form-group">
-                      <div class="input-group">
-                        <input  placeholder="CPF" name="cpf" type="text" id="cpf" maxlength="14" class="textBox" onkeypress='return SomenteNumero(event)' />
+                      <div for="cpf" class="input-group">
+                        <input  placeholder="CPF" name="cpf" type="text" id="cpf" maxlength="14" class="cpf textBox" onkeypress='return SomenteNumero(event)' />
                       </div>
                     </div>
                        
