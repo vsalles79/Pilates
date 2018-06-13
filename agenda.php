@@ -125,6 +125,7 @@
 						</thead>        
 				<?php
 				while($l = mysql_fetch_array($re)) {
+					$id         	  = $l["id_agenda"];
 					$nome       	  = $l["nome"];
 					$data       	  = $l["data"];
 					$dataFormat		  = date("d-m-Y", strtotime($data));
@@ -145,7 +146,7 @@
 						<td>$nomeFuncionario</td>
 						<td>$servico</td>
 						<td>						
-						<a href=\"cancelarAgenda.php?nome=$nome\">Cancelar</a> 							
+						<a href=\"cancelaAula.php?id=$id\">Cancelar</a> 							
 						</td>
 					</tr>\n";
 					}	

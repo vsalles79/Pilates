@@ -7,7 +7,7 @@ if(file_exists("init.php")) {
 }
 
 if(!function_exists("Abre_Conexao")) {
-  echo "Erro o arquivo init.php foi auterado, nao existe a função Abre_Conexao";
+  echo "Erro o arquivo init.php foi auterado, nao existe a funÃ§Ã£o Abre_Conexao";
   exit;
 }
 
@@ -157,11 +157,6 @@ if($total == 1) {
                     <div class="form-group">
                       <td>&nbsp;</td>
                       <td><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></td>
-                    </div>
-
-                    <div class="form-group">
-                      <td>&nbsp;</td>
-                      <a href="listar.php"><input type="submit" name="Submit" value="Salvar" style="cursor:pointer;" /></a>
                     </div>
               </div>
           </form>
