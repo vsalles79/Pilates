@@ -166,6 +166,9 @@ function SomenteNumero(e){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.min.js"></script>
 
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -215,7 +218,7 @@ function SomenteNumero(e){
                 	
                     <div class="form-group">
                       <div class="input-group">
-                        <input name="data" type="text" id="data" maxlength="10" class="textBox" placeholder="Data Nascimento" />
+                        <input name="data" type="text" id="data" maxlength="10" class="date textBox" placeholder="Data Nascimento" />
                       </div>
                     </div>
                 	
@@ -227,13 +230,13 @@ function SomenteNumero(e){
                        
                   	<div class="form-group">
                       <div class="input-group">
-                        <input placeholder="Telefone" name="telefone" type="text" id="telefone" maxlength="14" class="textBox" onkeypress='return SomenteNumero(event)'/>
+                        <input for="phone" placeholder="Telefone" name="telefone" type="text" id="telefone" maxlength="14" class="phone textBox" onkeypress='return SomenteNumero(event)'/>
                       </div>
                     </div>
                   	
                     <div class="form-group">
                       <div class="input-group">
-                        <input placeholder="Celular" name="celular" type="text" id="celular" maxlength="15" class="textBox" onkeypress='return SomenteNumero(event)'/>
+                        <input for="celphone" placeholder="Celular" name="celular" type="text" id="celular" maxlength="15" class="celphone textBox" onkeypress='return SomenteNumero(event)'/>
                       </div>
                     </div>
                         
