@@ -1,6 +1,7 @@
 <?php
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
+$id             = $_POST["id"];
 $nome           = $_POST["nome"];
 $data           = $_POST["data"];
 $cpf            = $_POST["cpf"];
@@ -29,7 +30,7 @@ if(!function_exists("Abre_Conexao")) {
 }
 
 Abre_Conexao();
-if(@mysql_query("UPDATE usuarios SET nome = '$nome', '$data', '$cpf', '$telefone', '$celular', '$email', '$sexo', '$cep', '$endereco', '$numero', '$complementoEnd', '$statusUser', '$login', '$senha' WHERE id_usuario = $id")) {
+if(@mysql_query("UPDATE usuarios SET nome='$nome', data='$data', cpf='$cpf', telefone='$telefone', celular='$celular', email='$email', sexo='$sexo', cep='$cep', endereco='$endereco', numero='$numero', complementoEnd='$complementoEnd', statusUser='$statusUser', login='$login', senha='$senha' WHERE usuarios.id_usuario = $id")) {
 
 	if(mysql_affected_rows() == 1){
 		echo "Registro atualizado com sucesso";

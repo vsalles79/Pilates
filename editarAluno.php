@@ -11,14 +11,14 @@ if(!function_exists("Abre_Conexao")) {
   exit;
 }
 
-$id = $_GET["id"];
+$idUser = $_GET["id"];
 
 Abre_Conexao();
-$re    = mysql_query("SELECT count(*) as total FROM usuarios WHERE id_usuario = $id");  
+$re    = mysql_query("SELECT count(*) as total FROM usuarios WHERE id_usuario = $idUser");  
 $total = mysql_result($re, 0, "total");
 
 if($total == 1) {
-  $re    = mysql_query("SELECT * FROM usuarios WHERE usuarios.id_usuario = $id");
+  $re    = mysql_query("SELECT * FROM usuarios WHERE usuarios.id_usuario = $idUser");
   $dados = mysql_fetch_array($re);    
 }
 ?>
@@ -61,7 +61,7 @@ if($total == 1) {
                        <ul class="sub-menu">
                         <li><a href="cadastroAluno.php">Aluno</a></li>
                         <li><a href="cadastroFuncionario.php">Colaborador</a></li>
-                        <li><a href="servico.php">Serviço</a></li>
+                        <li><a href="servico.php">Servi&ccedil;o</a></li>
                         <li><a href="cadastroAgenda.php">Agendamento</a></li>
                       </ul>
                     </li>
@@ -74,7 +74,8 @@ if($total == 1) {
         <div class="col-sm-12 form-aluno">
           <form id="form1" name="form1" method="post" action="salvar_edicao.php">
               <div class="col-sm-6">
-                    <div class="form-group">
+                <input id="id" type="hidden" value="<?php echo $dados["id_usuario"]; ?>"/>
+                    <div class="form-group">                     
                       <div class="input-group" id="name">
                         <input name="nome" type="text" id="nome" maxlength="45" class="textBox" placeholder="Nome"  value="<?php echo $dados["nome"]; ?>"/>
                       </div>

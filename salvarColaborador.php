@@ -8,7 +8,7 @@ $telefone      		 = $_POST["telefone"];
 $celular       		 = $_POST["celular"];
 $email 		   		 = $_POST["email"];
 $sexo         		 = $_POST["sexo"];
-$statusColaborador   = '1';
+$statusColaborador   = '0';
 $login        		 = $_POST["login"];
 $senha		  		 = $_POST["senha"];
 

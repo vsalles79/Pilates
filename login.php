@@ -36,7 +36,7 @@
 							<h1>Bem-Vindo!</h1>
 							<form name="login" method="post" action="confirmar_login.php">	
 								<div class="input-group mb-3">
-									<input name="login" type="text" id="login" class="form-login form-control" title="login" value="" size="30" maxlength="45" placeholder="Email"/>
+									<input name="login" type="text" id="login" class="form-login form-control" title="login" value="" size="30" maxlength="45" placeholder="Login"/>
 								</div>
 								<div class="input-group mb-4">
 									<input name="senha" type="password" id="senha" class="form-login form-control" title="senha" value="" size="30" maxlength="6" placeholder="Senha"/>

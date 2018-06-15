@@ -28,40 +28,19 @@ if(mysql_errno() != 0) {
 <head>
   <title>Cadastro Funcionario</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/cadastroFuncionario.js"></script>
-  <script type="text/javascript" src="bootstrap-dynamic-tabs/bootstrap-dynamic-tabs.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-  
-  <script type="text/javascript">
-    /* Máscaras ER */
-    function mascara(o,f){
-        v_obj=o
-        v_fun=f
-        setTimeout("execmascara()",1)
-    }
-    function execmascara(){
-        v_obj.value=v_fun(v_obj.value)
-    }
-    function mtel(v){
-        v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
-        v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-        v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
-        return v;
-    }
-    function id( el ){
-    	return document.getElementById( el );
-    }
-    window.onload = function(){
-    	id('fone').onkeypress = function(){
-    		mascara( this, mtel );
-    	}
-    }
-  </script>
+  <meta http-equiv="Content-Type" content="text/html" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+  <script src="js/maskedinput.js" type="text/javascript"></script>
+  <script type="text/javascript"> 
+    jQuery.noConflict();
+    jQuery(function($){
+       $("#data").mask("99/99/9999");
+       $("#telefone").mask("(99) 9999-9999");
+       $("#cpf").mask("999.999.999-99");
+       $("#celular").mask("(99) 9999-9999");      
+    });
+  </script> 
 
   <style>
   <!--
@@ -142,13 +121,8 @@ function SomenteNumero(e){
 }
 </script>
 
-
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bootstrap-dynamic-tabs/bootstrap-dynamic-tabs.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/cadastroFuncionario.css">  

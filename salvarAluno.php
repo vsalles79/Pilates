@@ -12,7 +12,7 @@ $cep            = $_POST["cep"];
 $endereco       = $_POST["endereco"];
 $numero         = $_POST["numero"];
 $complementoEnd = $_POST["complementoEnd"];
-$statusUser     = '1';
+$statusUser     = '0';
 $login          = $_POST["login"];
 $senha		    = $_POST["senha"];
 
