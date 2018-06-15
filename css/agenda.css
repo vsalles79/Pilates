@@ -56,6 +56,8 @@
     border-bottom: 2px solid #c2cfd6;
     padding: 0.35rem;
     border-top: 1px solid #c2cfd6;
+    font-size: 16px;
+    font-style: italic;
 }
 
 #table tbody {
